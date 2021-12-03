@@ -1,14 +1,17 @@
 package edu.isu.cs.cs2263.hw02.data;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class Course {
 
     public static final String[] CODES = { "CS", "CHEM", "PHYS", "MATH", "BTNY", "ZOO" };
     public static final String[] DEPTS = { "Computer Science", "Chemistry", "Physics", "Mathematics", "Botany", "Zoology" };
 
-    private int number;
-    private String name;
-    private int credits;
-    private String code;
+    @Getter @Setter private int number;
+    @Getter @Setter private String name;
+    @Getter @Setter private int credits;
+    @Getter @Setter private String code;
 
     public Course() {}
 
@@ -17,38 +20,6 @@ public class Course {
         this.code = code;
         this.number = number;
         this.credits = credits;
-    }
-
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getCredits() {
-        return credits;
-    }
-
-    public void setCredits(int credits) {
-        this.credits = credits;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
     }
 
     @Override
